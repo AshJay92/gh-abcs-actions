@@ -68,7 +68,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v4
         with:
-          name: output-log-file
+          name: ${{ matrix.node-version }} on ${{ matrix.os }} - output-log-file
 
       # Placeholder - this step would be some action or run commands that deploys the code
       - name: Deploy to test env
